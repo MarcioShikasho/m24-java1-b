@@ -10,6 +10,8 @@ public class BeeWorld extends World
 {
     //Campos e Fields
     private Abelha abelha = null;
+    private int score;
+    private Placar placar = null;
     
     /**
      * Construtor da classe BeeWorld.
@@ -42,11 +44,19 @@ public class BeeWorld extends World
             addObject(new Mosca(vel, ang), pX, pY);
         }
         abelha.setLocation(56, 60);
+        //criando o placar no mundo
+        placar = new Placar();
+        addObject(placar, 750, 30);
     }
     /**
      * Getter para obter a instância da abelha no mundo.
      */
     public Abelha getAbelha(){
         return abelha;
+    }
+    
+    public void addScore(int value){
+        score += value;
+        placar.setTexto("Score: " + score);
     }
 }

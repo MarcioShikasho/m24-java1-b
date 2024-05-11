@@ -21,9 +21,10 @@ public class Nave extends Actor
         if (Greenfoot.isKeyDown("right")){
             move(1);
         }
-        //Verificando se foi clickado a barra de espaço, se sim, criamos a bala
+        //Verificando se foi clickado a barra de espaço, se sim, criamos a ela
         if (Greenfoot.isKeyDown("space")){
-            getWorld().addObject(new Bala(), getX(), getY() - 45);
+            //getWorld().addObject(new Bala(), getX(), getY() - 45);
+            ((SpaceInvadersWorld) getWorld()).criarBala(getX(), getY() - 45);
         }
     }
     

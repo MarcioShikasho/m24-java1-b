@@ -19,6 +19,11 @@ public class Alien extends Actor
         
         if (isAtEdge()){
             pX *= -1;
+            setLocation(getX(), getY() + 30);
+        }
+        if (isTouching(Nave.class)){
+            getWorld().showText("Game Over", 400, 300);
+            Greenfoot.stop();
         }
     }
 }
