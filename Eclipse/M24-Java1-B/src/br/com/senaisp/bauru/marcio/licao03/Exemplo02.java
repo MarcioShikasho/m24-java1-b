@@ -19,4 +19,5 @@ public class Exemplo02 {
 	System.out.println(++letraA);
 	System.out.println("" + letraA + letraB);
 	}
+	
 }

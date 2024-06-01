@@ -15,5 +15,6 @@ public class Exercicio01 {
 		System.out.println("A área do seu triângulo é de: " + area + "m²");
 		entrada.close();
 	}
-
+	
+	
 }
